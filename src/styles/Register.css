@@ -1,0 +1,15 @@
+.register-logo {
+    top: 5%;
+}
+
+.register-box {
+    height: 500px;
+}
+
+.register-box::before {
+    height: 500px;
+}
+
+.register-box::after {
+    height: 500px;
+}

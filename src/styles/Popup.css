@@ -1,0 +1,18 @@
+.modal-header {
+    padding: 0px;
+}
+
+.lord-size-error,
+.lord-size-success {
+    width: 100px;
+    height: 100px;
+}
+
+.modal-error {
+    display: grid;
+    place-items: center;
+}
+
+.modal-error p {
+    padding: 10px;
+}
