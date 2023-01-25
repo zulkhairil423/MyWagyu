@@ -24,6 +24,7 @@ export const AuthProvider = ({ children }) => {
       } else {
         setUser(null);
         setRole("");
+        setLoading(false);
       }
     });
   }, []);

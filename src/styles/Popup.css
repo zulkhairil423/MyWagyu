@@ -16,3 +16,11 @@
 .modal-error p {
     padding: 10px;
 }
+
+.modal-rst-psswrd {
+    align-items: center;
+}
+
+.modal-rst-psswrd-btn{
+    padding-top: 10px;
+}

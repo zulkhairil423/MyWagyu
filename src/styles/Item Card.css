@@ -118,6 +118,11 @@
     align-content: center;
 }
 
+.modal-header,
+.modal-container {
+    font-family: 'Avenir Next Rounded', sans-serif;
+}
+
 .modal-img {
     flex: 2;
     padding-right: 5px;
