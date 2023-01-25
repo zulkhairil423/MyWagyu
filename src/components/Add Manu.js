@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "../styles/Add Manu.css";
 import NavBar from "./NavBar";
-import Wagyu from 'C:/Users/LeonyX/Documents/Blockchain/.vscode/GroupProject/mywagyu/src/truffle/build/contracts/WagyuInfo.json';
+import Wagyu from '../truffle/build/contracts/WagyuInfo.json';
 import { ethers } from "ethers";
 
 
 //declare the Wagyu.sol contract address inside the variable
-const wagyuinfoaddress = '0xfB89012a6A40c8A26e18343E2D41DAD28F872642'
+const wagyuinfoaddress = '0x0Ae5A6aD90D79F886c0411BdBEfBBb9A843ECaB4'
 
 const AddManu = () => {
     const [wagyuId, setWagyuId] = useState("");
@@ -19,6 +19,8 @@ const AddManu = () => {
 
     //function that connect the front end with the smart contract and send addmanuinfo data into the blockchain
     async function addmanu() {
+    if (typeof window.ethereum !== "undefined") {
+        await window.ethereum.send("eth_requestAccounts");
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         const contract = new ethers.Contract(wagyuinfoaddress, Wagyu.abi, signer);
@@ -27,6 +29,7 @@ const AddManu = () => {
         console.log(addmanuinfo);
         alert("Wagyu manufacturer information successfully added")
       }
+    }
 
     //once pressed on addmanu button, this const will ask for confirmation from user before proceed to addmanu function
       const submitbutton = () => {

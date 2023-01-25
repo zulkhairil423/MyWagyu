@@ -4,7 +4,7 @@ import "../styles/Item Card.css";
 import "../styles/variables.css";
 import lottie from "lottie-web";
 import { defineElement } from "lord-icon-element";
-import Transaction from 'C:/Users/LeonyX/Documents/Blockchain/.vscode/GroupProject/mywagyu/src/truffle/build/contracts/WagyuTransaction.json';
+import Transaction from '../truffle/build/contracts/WagyuTransaction.json';
 import { ethers } from "ethers";
 <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>;
 
@@ -13,10 +13,10 @@ defineElement(lottie.loadAnimation);
 
 
 //declare the Wagyu.sol contract address inside the variable
-const wagyutransaddress = '0xE9Ff5082f042BB9375B7e335F6eBBC68B9fCf745'
+const wagyutransaddress = '0xbb22db35249F5E205df64d8493cF798d7fFc093B'
 
-//default owner of store address
-const wagyustoreaddress = '0x1a7082A07Ea0a75a78c330E31a8E080610c4dc12'
+//default owner of store address, can declare as your own wallet address
+const wagyustoreaddress = '0x330e92dD4F5b5Ab62026FC880D132e1241E9DC10'
 
 //USD to ether conversion value
 const ethervalue = '0.006'

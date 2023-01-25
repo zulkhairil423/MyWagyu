@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "../styles/Add Wagyu.css";
 import NavBar from "./NavBar";
-import Wagyu from 'C:/Users/LeonyX/Documents/Blockchain/.vscode/GroupProject/mywagyu/src/truffle/build/contracts/WagyuInfo.json';
+import Wagyu from '../truffle/build/contracts/WagyuInfo.json';
 import { ethers } from "ethers";
 
 //declare the Wagyu.sol contract address inside the variable
-const wagyuinfoaddress = '0xfB89012a6A40c8A26e18343E2D41DAD28F872642'
+const wagyuinfoaddress = '0x0Ae5A6aD90D79F886c0411BdBEfBBb9A843ECaB4'
 
 const AddWagyu = () => {
     const [wagyuId, setWagyuId] = useState("");
@@ -18,6 +18,8 @@ const AddWagyu = () => {
 
     //function that connect the front end with the smart contract and send addwagyuinfo data into the blockchain
     async function addwagyu() {
+    if (typeof window.ethereum !== "undefined") {
+      await window.ethereum.send("eth_requestAccounts");
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(wagyuinfoaddress, Wagyu.abi, signer);
@@ -26,6 +28,7 @@ const AddWagyu = () => {
       console.log(addwagyuinfo);
       alert("Wagyu livestock information successfully added")
     }
+}
 
     //once pressed on addwagyu button, this const will ask for confirmation from user before proceed to addwagyu function
     const submitbutton = () => {

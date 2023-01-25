@@ -86,5 +86,15 @@ contract WagyuInfo {
   constructor(){
     addWagyu("CowA101", "12", "Japanese Black", "A1", "Ahmad","Japan","halal");
     addManufacturer("CowA101", "Rahim", "Japan", "Haram", "CowA101.webp", "12 Dec 2020");
+    addWagyu("CowA201", "13", "Wagyu", "A2", "John","Australia","halal");
+    addManufacturer("CowA201", "David", "Australia", "Halal", "CowA201.webp", "15 Dec 2020");
+    addWagyu("CowA301", "15", "Angus", "A3", "Jenna","USA","non-halal");
+    addManufacturer("CowA301", "Liam", "USA", "non-halal", "CowA301.webp", "18 Dec 2020");
+    addWagyu("CowA401", "18", "Hereford", "A4", "Hannah","New Zealand","halal");
+    addManufacturer("CowA401", "Emily", "New Zealand", "Halal", "CowA401.webp", "20 Dec 2020");
+    addWagyu("CowA102", "14", "Australian Black", "A1", "John","Australia","halal");
+    addManufacturer("CowA102", "Michael", "Australia", "halal", "CowA102.webp", "12 Dec 2020");
+    addWagyu("CowA103", "16", "American Black", "A1", "Steve","USA","halal");
+    addManufacturer("CowA103", "Bill", "USA", "Halal", "CowA103.webp", "16 Dec 2020");
   }
 }
