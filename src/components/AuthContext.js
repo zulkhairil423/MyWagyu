@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
     });
   }, []);
 
-  if(!loading) {
+  if(loading) {
     return <Loading/>
   }
 
