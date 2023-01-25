@@ -54,10 +54,19 @@ const NavBar = () => {
         )}
       </div>
       <div className="navbar-pages">
-        <Link to="">Home</Link>
-        <Link to="">Products</Link>
+        <Link to="/">Home</Link>
         {user ? (
           <Link to="/profile">Profile</Link>
+        ) : (
+          <span></span>
+        )}
+        {role === "farmer" ? (
+          <Link to="addwagyu">Add New Wagyu</Link>
+        ) : (
+          <span></span>
+        )}
+        {role === "manufacturer" ? (
+          <Link to="addmanu">Add Manufactured Wagyu</Link>
         ) : (
           <span></span>
         )}
