@@ -61,12 +61,12 @@ const NavBar = () => {
           <span></span>
         )}
         {role === "farmer" ? (
-          <Link to="addwagyu">Add New Wagyu</Link>
+          <Link to="/addwagyu">Add New Wagyu</Link>
         ) : (
           <span></span>
         )}
         {role === "manufacturer" ? (
-          <Link to="addmanu">Add Manufactured Wagyu</Link>
+          <Link to="/addmanu">Add Manufactured Wagyu</Link>
         ) : (
           <span></span>
         )}
